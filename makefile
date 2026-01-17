@@ -2,7 +2,8 @@ CC = clang
 LIB_BASE = C:/Users/i5lot/scoop/apps/glfw/current
 
 
-CFLAGS = -Wall -Wextra -std=c99 -I"$(LIB_BASE)/include" -I"src/include"
+CFLAGS = -Wall -Wextra -std=c99 -I"$(LIB_BASE)/include" -I"src/include" -I"src/cores"
+
 LDFLAGS = -L"$(LIB_BASE)/lib-vc2022" -lglfw3 -lopengl32 -lgdi32 -luser32 -lshell32 \
           -Xlinker /NODEFAULTLIB:libcmt -lmsvcrt
 

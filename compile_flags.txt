@@ -1,5 +1,6 @@
 -I/Users/i5lot/scoop/apps/glfw/current/include
 -Isrc/include
+-Isrc/cores
 -std=c99
 -Wall
 -Wextra
