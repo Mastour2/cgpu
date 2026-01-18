@@ -41,17 +41,17 @@ static inline void window_frame_resize(GLFWwindow* p_window, int width, int heig
 
         /* Make the window's context current */
         glfwMakeContextCurrent(window);
-
-        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress));
-
+        gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
         glfwShowWindow(window);
 
         glfwSetFramebufferSizeCallback(window, window_frame_resize);
     }
 
-    static inline void window_frame_resize(GLFWwindow* p_window, int width, int height) {
+    static inline void window_frame_resize(GLFWwindow* p_window __attribute__((unused)), int width, int height) {
+        // (void)p_window;
+
         glViewport(0, 0, width, height);
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.35f, 0.35f, 0.35f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glfwSwapBuffers(window);

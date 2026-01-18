@@ -1,10 +1,11 @@
 CC = clang
-LIB_BASE = C:/Users/i5lot/scoop/apps/glfw/current
 
+GLFW_BASE = C:/Users/i5lot/scoop/apps/glfw/current
+CGLM_BASE = D:/WDownloads/cglm-0.9.6/cglm-0.9.6
 
-CFLAGS = -Wall -Wextra -std=c99 -I"$(LIB_BASE)/include" -I"src/include" -I"src/cores"
+CFLAGS = -Wall -Wextra -std=c99 -I"$(GLFW_BASE)/include" -I"$(CGLM_BASE)/include" -I"include" -I"src/cores" -D_CRT_SECURE_NO_WARNINGS
 
-LDFLAGS = -L"$(LIB_BASE)/lib-vc2022" -lglfw3 -lopengl32 -lgdi32 -luser32 -lshell32 \
+LDFLAGS = -L"$(GLFW_BASE)/lib-vc2022" -lglfw3 -lopengl32 -lgdi32 -luser32 -lshell32 \
           -Xlinker /NODEFAULTLIB:libcmt -lmsvcrt
 
 TARGET = out

@@ -1,5 +1,6 @@
 -I/Users/i5lot/scoop/apps/glfw/current/include
--Isrc/include
+-I/D:/WDownloads/cglm-0.9.6/cglm-0.9.6
+-Iinclude
 -Isrc/cores
 -std=c99
 -Wall
